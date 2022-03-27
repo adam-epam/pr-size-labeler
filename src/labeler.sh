@@ -14,7 +14,7 @@ labeler::label() {
   local -r total_modifications=$(github::calculate_total_modifications "$pr_number" "$files_to_ignore")
 
   log::message "Total modifications (additions + deletions): $total_modifications"
-  log::message "Ignoring files (if present): $files_to_ignore"
+  #log::message "Ignoring files (if present): $files_to_ignore"
 
   local -r label_to_add=$(labeler::label_for "$total_modifications" "$@")
 
